@@ -18,8 +18,10 @@
   </head>
 
   <body>
-    <%= flash[:notice] %>
-    <%= flash[:error] %>
+    <div class = "flash-message">
+      <%= flash[:notice] %>
+      <%= flash[:error] %>
+    </div>
     <%= yield %>
   </body>
 </html>
