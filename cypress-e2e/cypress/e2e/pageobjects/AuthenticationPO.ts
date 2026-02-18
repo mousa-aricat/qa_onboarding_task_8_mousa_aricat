@@ -32,10 +32,6 @@ class AuthenticationPO{
     }
 
 
-    public checkSuccessFlashMessage(type: string, message: string): void{
-        cy.get(AuthenticationLocators.FLASH_MESSAGE_LOCATOR).first().should('contain', message)
-    }
-
 
 }
 

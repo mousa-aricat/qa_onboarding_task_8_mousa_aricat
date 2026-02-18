@@ -1,6 +1,6 @@
 import { Given, When, Then, DataTable } from "@badeball/cypress-cucumber-preprocessor";
 import AuthenticationPO from "../../e2e/pageobjects/AuthenticationPO";
-
+import GeneralPO from "../../e2e/pageobjects/GeneralPO";
 
 Given("user navigate to login page", ()=>{
     AuthenticationPO.getInstance().navigate()
@@ -22,6 +22,3 @@ Then ("user is redirected to the home page",() =>{
     AuthenticationPO.getInstance().checkMainPage()
 })
 
-Then ("flash message appear with type {string} and content {string}", (type: string, message: string)=>{
-    AuthenticationPO.getInstance().checkSuccessFlashMessage(type, message)
-})
