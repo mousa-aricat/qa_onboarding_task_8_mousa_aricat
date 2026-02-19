@@ -25,4 +25,4 @@ Feature: Manage Tags Authorization
         And user clicks on Login
         And user is redirected to the home page
         When user navigates to manage tags page
-        And flash message appear with type "fail" and content "Not Authorized"
+        And flash message appear with content "Not Authorized"

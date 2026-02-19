@@ -81,6 +81,12 @@ class BlogsManagementPO{
         cy.wait(500)
     }
 
+    public editButtonDoesntExist(): void{
+        cy.get(BlogsManagementLocators.EDIT_BLOG_LOCATOR).should('not.exist')
+    }
+    public destroyButtonDoesntExist(): void{
+        cy.get(BlogsManagementLocators.DESTROY_BLOG_LOCATOR).should('not.exist')
+    }
 
 }
 

@@ -62,3 +62,10 @@ Then("blog validation error message appear with content {string}", (content: str
 Then("blog {string} should not appear in blogs list", (blog: string)=>{
     BlogsManagementPO.getInstance().blogDoesntExist(blog)
 })
+
+Then("edit this blog button shouldn't appear",()=>{
+    BlogsManagementPO.getInstance().editButtonDoesntExist()
+})
+Then("destroy this blog button shouldn't appear",()=>{
+    BlogsManagementPO.getInstance().destroyButtonDoesntExist()
+})

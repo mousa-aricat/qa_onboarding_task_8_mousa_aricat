@@ -22,3 +22,7 @@ Then ("user is redirected to the home page",() =>{
     AuthenticationPO.getInstance().checkMainPage()
 })
 
+Then("url didn't change", ()=>{
+    AuthenticationPO.getInstance().checkURL()
+})
+

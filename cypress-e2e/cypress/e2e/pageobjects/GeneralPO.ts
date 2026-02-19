@@ -12,7 +12,7 @@ class GeneralPO{
     }
 
 
-    public checkFlashMessage(type: string, message: string): void{
+    public checkFlashMessage(message: string): void{
         cy.get(GeneralLocators.FLASH_MESSAGE_LOCATOR).first().should('contain', message)
     }
 }

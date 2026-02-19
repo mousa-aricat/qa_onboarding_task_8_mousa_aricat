@@ -1,4 +1,4 @@
-Feature: tag management
+Feature: Tag Management
 
     Background:
         Given user navigate to login page
@@ -20,7 +20,7 @@ Feature: tag management
         And user click on New Tag
         And user fill name with "Drama"
         When user click on Create Tag
-        Then flash message appear with type "success" and content "Tag was successfully created."
+        Then flash message appear with content "Tag was successfully created."
         And user can see tag "Drama"
         And user click on Back to tags from the show page
         And user can see tag "Drama" listed
@@ -40,7 +40,7 @@ Feature: tag management
         And user clear name field
         And user fill name with "Thriller"
         When user click on Create Tag
-        Then flash message appear with type "success" and content "Tag was successfully updated."
+        Then flash message appear with content "Tag was successfully updated."
         And user can see tag "Thriller"
         And user click on Back to tags from the show page
         And user can see tag "Thriller" listed
@@ -51,5 +51,5 @@ Feature: tag management
         And user click on show tag "Thriller"
         When user click on Destroy this tag
         # And user click ok on confirmation message
-        Then flash message appear with type "success" and content "Tag was successfully destroyed."
+        Then flash message appear with content "Tag was successfully destroyed."
         And tag "Thriller" should not appear in tags list

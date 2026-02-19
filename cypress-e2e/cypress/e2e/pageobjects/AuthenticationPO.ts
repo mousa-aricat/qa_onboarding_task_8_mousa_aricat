@@ -31,6 +31,10 @@ class AuthenticationPO{
         cy.url().should('eq', "http://localhost:3000/dashboard")
     }
 
+    public checkURL(): void{
+        cy.url().should('eq', "http://localhost:3000/sessions/new")
+    }
+
 
 
 }
