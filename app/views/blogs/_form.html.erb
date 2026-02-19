@@ -1,6 +1,6 @@
 <%= form_with(model: blog) do |form| %>
   <% if blog.errors.any? %>
-    <div style="color: red">
+    <div style="color: red" data-e2e = "blog-validation-error">
       <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
 
       <ul>
@@ -13,24 +13,24 @@
 
   <div>
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, data: {e2e: "blog-title-field"}%>
   </div>
 
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_field :body %>
+    <%= form.text_field :body, data: {e2e: "blog-title-body"} %>
   </div>
 
   <div>
     <%= form.hidden_field :user_id %>
   </div>
 
-  <div>
+  <div data-e2e = "tags-check">
     <%= form.label :tag_builder, style: "display: block" %>
     <%= form.collection_check_boxes :tag_ids, Tag.all, :id, :name %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Create Blog", data: {e2e: "create-blog"}%>
   </div>
 <% end %>

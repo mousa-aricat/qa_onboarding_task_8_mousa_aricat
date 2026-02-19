@@ -8,5 +8,5 @@
   <% if @current_user.admin? %>
     <li><%= link_to "Manage Tags", tags_path, data: {e2e: "manage-tags"}%></li>
   <% end %>
-  <li><%= link_to "Blogs", blogs_path %></li>
+  <li><%= link_to "Blogs", blogs_path, data: {e2e: "blogs-button"} %></li>
 </ul>
