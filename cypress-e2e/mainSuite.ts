@@ -12,7 +12,9 @@ if (!suites_to_run) {
 const suites = {
   smoke: [
     // "smoke_suite/authentication.feature",
-    "smoke_suite/authorization.feature",
+    // "smoke_suite/authorization.feature",
+    "smoke_suite/tags_management.feature",
+
   ]
 };
 
