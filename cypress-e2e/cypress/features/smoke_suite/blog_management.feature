@@ -1,0 +1,2 @@
+Feature: Blog management
+
