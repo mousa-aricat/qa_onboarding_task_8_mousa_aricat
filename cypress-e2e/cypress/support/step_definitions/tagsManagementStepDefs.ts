@@ -49,3 +49,15 @@ Then("tag {string} should not appear in tags list", (tag: string)=>{
     TagsManagementPO.getInstance().checkTagNotAvailable(tag)
 })
 
+Then("validation error message appear with content {string}", (content: string)=>{
+    TagsManagementPO.getInstance().checkDuplicateErrorMessage(content)
+})
+
+
+Given("user click on edit this tag", ()=>{
+    TagsManagementPO.getInstance().clickEditTag()
+})
+
+Given("user clear name field", ()=>{
+    TagsManagementPO.getInstance().clearNameField()
+})

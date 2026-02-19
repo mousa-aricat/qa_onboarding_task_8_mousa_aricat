@@ -8,6 +8,8 @@ enum TagsManagementLocators{
     TAG_NAME_LOCATOR = "[data-e2e='tag-name']",
     BACK_TO_TAGS_SHOW_LOCATOR = "[data-e2e='back-to-tags-show']",
     DELETE_TAG_LOCATOR = "[data-e2e='delete-tag']",
+    DUPLICATE_TAG_ERROR_LOCATOR = "[data-e2e='tag-error']",
+    EDIT_TAG_LOCATOR = "[data-e2e='edit-tag']",
 }
 
 export default TagsManagementLocators
